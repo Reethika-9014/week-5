@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Esanagiri Reethika - MCA Student and Aspiring Software and IT Professional">
+
+    <title>Esanagiri Reethika | Portfolio</title>
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --secondary: #06b6d4;
+            --dark: #0f172a;
+            --text: #475569;
+            --white: #ffffff;
+            --light: #f8fafc;
+            --border: #e2e8f0;
+            --gradient: linear-gradient(135deg, #2563eb, #06b6d4);
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            max-width: 1200px;
+            height: 72px;
+            margin: auto;
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .logo-circle {
+            width: 42px;
+            height: 42px;
+
+            border-radius: 50%;
+            background: var(--gradient);
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 22px;
+            font-weight: 800;
+
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 600;
+            color: #475569;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 27px;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 100vh;
+            padding: 120px 25px 70px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(37, 99, 235, 0.10),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 20% 80%,
+                    rgba(6, 182, 212, 0.08),
+                    transparent 30%
+                ),
+                #f8fafc;
+        }
+
+        .hero-container {
+            max-width: 1150px;
+            width: 100%;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-block;
+
+            padding: 8px 15px;
+            margin-bottom: 20px;
+
+            border-radius: 30px;
+
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+
+            color: var(--primary);
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 6vw, 72px);
+            line-height: 1.05;
+
+            color: var(--dark);
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background: var(--gradient);
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            color: #334155;
+
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 650px;
+
+            color: var(--text);
+            font-size: 16px;
+
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 13px 22px;
+
+            border-radius: 9px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            color: white;
+            background: var(--gradient);
+
+            box-shadow:
+                0 10px 25px rgba(37, 99, 235, 0.20);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            color: var(--dark);
+            background: white;
+
+            border: 1px solid #cbd5e1;
+        }
+
+        .btn-outline:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+
+        /* =========================
+           PROFILE
+        ========================== */
+
+        .hero-profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-card {
+            width: 330px;
+            height: 380px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: white;
+
+            border: 1px solid var(--border);
+            border-radius: 28px;
+
+            box-shadow:
+                0 25px 60px rgba(15, 23, 42, 0.12);
+        }
+
+        .profile-letter {
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            background: var(--gradient);
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 110px;
+            font-weight: 800;
+
+            box-shadow:
+                0 25px 50px rgba(37, 99, 235, 0.30),
+                inset 0 0 30px rgba(255, 255, 255, 0.15);
+        }
+
+        .floating-tag {
+            position: absolute;
+
+            padding: 10px 15px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+            border-radius: 10px;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .tag-one {
+            top: 35px;
+            left: -35px;
+        }
+
+        .tag-two {
+            bottom: 40px;
+            right: -35px;
+        }
+
+
+        /* =========================
+           COMMON SECTION
+        ========================== */
+
+        section {
+            padding: 90px 25px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading span {
+            color: var(--primary);
+
+            font-size: 12px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-heading h2 {
+            color: var(--dark);
+
+            font-size: 38px;
+
+            margin-top: 7px;
+        }
+
+        .section-heading p {
+            max-width: 650px;
+
+            margin: 10px auto 0;
+
+            color: var(--text);
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: var(--dark);
+
+            font-size: 27px;
+
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            color: var(--text);
+
+            margin-bottom: 15px;
+        }
+
+        .info-box {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+        }
+
+        .info-item {
+            padding: 20px;
+
+            background: #f8fafc;
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+        }
+
+        .info-item strong {
+            display: block;
+
+            color: var(--dark);
+
+            margin-bottom: 5px;
+        }
+
+        .info-item span {
+            color: var(--text);
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================== */
+
+        .education-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .education-card {
+            padding: 25px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            transition: 0.3s;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 35px rgba(15, 23, 42, 0.08);
+        }
+
+        .year {
+            color: var(--primary);
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+        .education-card h3 {
+            color: var(--dark);
+
+            margin: 8px 0;
+        }
+
+        .education-card p {
+            color: var(--text);
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills {
+            background: white;
+        }
+
+        .skills-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+        }
+
+        .skill {
+            padding: 17px;
+
+            text-align: center;
+
+            background: #f8fafc;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            color: #334155;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            color: var(--primary);
+
+            border-color: var(--primary);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           LANGUAGES
+        ========================== */
+
+        .languages {
+            background: #f8fafc;
+        }
+
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .language-card {
+            padding: 25px;
+            text-align: center;
+
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+
+            transition: 0.3s;
+        }
+
+        .language-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 35px rgba(15, 23, 42, 0.08);
+        }
+
+        .language-card h3 {
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .language-card p {
+            color: var(--text);
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CAREER OBJECTIVE
+        ========================== */
+
+        .career {
+            background: white;
+        }
+
+        .career-card {
+            max-width: 900px;
+            margin: auto;
+
+            padding: 35px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #f8fbff
+                );
+
+            border: 1px solid var(--border);
+            border-radius: 18px;
+
+            box-shadow:
+                0 15px 35px rgba(15, 23, 42, 0.06);
+        }
+
+        .career-card p {
+            color: var(--text);
+            font-size: 16px;
+            text-align: center;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            background: var(--dark);
+
+            color: white;
+        }
+
+        .contact .section-heading h2 {
+            color: white;
+        }
+
+        .contact .section-heading p {
+            color: #cbd5e1;
+        }
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 22px;
+        }
+
+        .contact-card {
+            padding: 25px;
+
+            background: #172033;
+
+            border: 1px solid #263449;
+
+            border-radius: 15px;
+        }
+
+        .contact-card h3 {
+            color: white;
+
+            margin-bottom: 8px;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            color: #cbd5e1;
+
+            font-size: 14px;
+        }
+
+        .contact-card a:hover {
+            color: #38bdf8;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 25px;
+
+            background: #0a1020;
+
+            color: #94a3b8;
+
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 1000px) {
+
+            .nav-links {
+                gap: 13px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-profile {
+                margin-top: 20px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 750px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+
+                position: absolute;
+
+                top: 72px;
+                left: 0;
+
+                width: 100%;
+
+                padding: 20px;
+
+                flex-direction: column;
+
+                background: white;
+
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero {
+                padding-top: 110px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .profile-card {
+                width: 280px;
+                height: 330px;
+            }
+
+            .profile-letter {
+                width: 180px;
+                height: 180px;
+
+                font-size: 95px;
+            }
+
+            .floating-tag {
+                display: none;
+            }
+
+            .education-grid,
+            .languages-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-box {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading h2 {
+                font-size: 31px;
+            }
+        }
+
+
+        @media (max-width: 450px) {
+
+            .logo {
+                font-size: 15px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav>
+
+            <a href="#home" class="logo">
+
+                <div class="logo-circle">
+                    E
+                </div>
+
+                Esanagiri Reethika
+
+            </a>
+
+
+            <div class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </div>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#career">Career</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-container">
+
+            <div>
+
+                <div class="badge">
+                    MCA Student · Fresher
+                </div>
+
+                <h1>
+                    Hello, I'm <span>Reethika.</span>
+                </h1>
+
+                <h2>
+                    Aspiring Software & IT Professional
+                </h2>
+
+                <p>
+                    I am a motivated and dedicated BCA graduate currently
+                    pursuing Master of Computer Applications (MCA) at
+                    Vignan University. I am eager to learn new technologies,
+                    develop practical skills and begin my professional
+                    career in the software and IT field.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#education" class="btn btn-primary">
+                        View My Education
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROFILE -->
+
+            <div class="hero-profile">
+
+                <div class="profile-card">
+
+                    <div class="floating-tag tag-one">
+                        Problem Solving
+                    </div>
+
+                    <div class="profile-letter">
+                        E
+                    </div>
+
+                    <div class="floating-tag tag-two">
+                        Teamwork
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>About Me</span>
+
+                <h2>
+                    Who I Am
+                </h2>
+
+                <p>
+                    A brief introduction about my education,
+                    career status and personal strengths.
+                </p>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <h3>
+                        Aspiring Software & IT Professional
+                    </h3>
+
+                    <p>
+                        I am currently pursuing my Master of Computer
+                        Applications (MCA) at Vignan University,
+                        Andhra Pradesh.
+                    </p>
+
+                    <p>
+                        I am a BCA graduate from Sri Gayatri Degree College,
+                        Kandukur, under Andhra Kesari University, with a
+                        CGPA of 8.22 out of 10.
+                    </p>
+
+                    <p>
+                        As a fresher, I am looking forward to learning
+                        new technologies, gaining practical experience
+                        and contributing positively to a professional
+                        organization.
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <div class="info-item">
+
+                        <strong>
+                            Education
+                        </strong>
+
+                        <span>
+                            MCA · Expected 2028
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <strong>
+                            Career Status
+                        </strong>
+
+                        <span>
+                            Fresher
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <strong>
+                            Languages
+                        </strong>
+
+                        <span>
+                            English · Telugu
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <strong>
+                            Location
+                        </strong>
+
+                        <span>
+                            Andhra Pradesh, India
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>
+                    Education
+                </span>
+
+                <h2>
+                    Academic Journey
+                </h2>
+
+                <p>
+                    My academic qualifications as mentioned in my resume.
+                </p>
+
+            </div>
+
+
+            <div class="education-grid">
+
+
+                <div class="education-card">
+
+                    <div class="year">
+                        Expected 2028
+                    </div>
+
+                    <h3>
+                        Master of Computer Applications
+                    </h3>
+
+                    <p>
+                        Vignan University, Andhra Pradesh
+                    </p>
+
+                    <p>
+                        Currently Pursuing
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <div class="year">
+                        2026
+                    </div>
+
+                    <h3>
+                        Bachelor of Computer Applications
+                    </h3>
+
+                    <p>
+                        Sri Gayatri Degree College, Kandukur
+                    </p>
+
+                    <p>
+                        Andhra Kesari University
+                    </p>
+
+                    <p>
+                        CGPA: 8.22 / 10
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section class="skills" id="skills">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>
+                    Skills
+                </span>
+
+                <h2>
+                    My Strengths
+                </h2>
+
+                <p>
+                    Personal and professional strengths mentioned in my resume.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill">
+                    Problem-solving
+                </div>
+
+                <div class="skill">
+                    Willingness to Learn
+                </div>
+
+                <div class="skill">
+                    Adaptability
+                </div>
+
+                <div class="skill">
+                    Teamwork
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         LANGUAGES
+    ========================== -->
+
+    <section class="languages">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>
+                    Languages
+                </span>
+
+                <h2>
+                    Languages I Speak
+                </h2>
+
+            </div>
+
+
+            <div class="languages-grid">
+
+                <div class="language-card">
+
+                    <h3>
+                        English
+                    </h3>
+
+                    <p>
+                        Language
+                    </p>
+
+                </div>
+
+
+                <div class="language-card">
+
+                    <h3>
+                        Telugu
+                    </h3>
+
+                    <p>
+                        Language
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CAREER OBJECTIVE
+    ========================== -->
+
+    <section class="career" id="career">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>
+                    Career Objective
+                </span>
+
+                <h2>
+                    My Career Goal
+                </h2>
+
+            </div>
+
+
+            <div class="career-card">
+
+                <p>
+                    A motivated and dedicated BCA graduate and MCA student
+                    seeking an internship opportunity to begin a professional
+                    career in the software and IT field. Eager to learn new
+                    technologies, develop practical skills, and contribute
+                    positively to an organization while growing professionally.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>
+                    Contact
+                </span>
+
+                <h2>
+                    Let's Connect
+                </h2>
+
+                <p>
+                    Feel free to contact me regarding internship and
+                    professional opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-card">
+
+                    <h3>
+                        Name
+                    </h3>
+
+                    <p>
+                        Esanagiri Reethika
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <a href="mailto:reethika9014gmail.com">
+                        reethika9014gmail.com
+                    </a>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <h3>
+                        Phone
+                    </h3>
+
+                    <a href="tel:7601022138">
+                        7601022138
+                    </a>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <h3>
+                        Location
+                    </h3>
+
+                    <p>
+                        Andhra Pradesh, India
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <h3>
+                        Career Status
+                    </h3>
+
+                    <p>
+                        Fresher
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <h3>
+                        Nationality
+                    </h3>
+
+                    <p>
+                        Indian
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        © 2026 Esanagiri Reethika.
+        All Rights Reserved.
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function toggleMenu() {
+
+            const navLinks =
+                document.getElementById("navLinks");
+
+            navLinks.classList.toggle("active");
+
+        }
+
+
+        /* Close mobile menu after clicking */
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(function(link) {
+
+                link.addEventListener(
+                    "click",
+                    function() {
+
+                        document
+                            .getElementById("navLinks")
+                            .classList.remove("active");
+
+                    }
+                );
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>
